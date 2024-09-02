@@ -37,9 +37,6 @@ export async function addProduct(data: ProductData) {
 export async function getProducts() {
     try {
         const url = `${import.meta.env.VITE_API_URL}/api/products`
-        console.log(import.meta.env)
-        console.log(url)
-
         const { data } = await axios.get(url)
 
         const result = safeParse(ProductsSchema, data.data)
