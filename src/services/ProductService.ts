@@ -41,6 +41,7 @@ export async function getProducts() {
 
         const result = safeParse(ProductsSchema, data.data)
 
+        console.log(data)
         console.log(result)
 
         if (result.success) {
